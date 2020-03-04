@@ -35,6 +35,8 @@ public class CustomUser
 CustomUser customUser = RandomUserMe.generateSingleUser<CustomUser>(null, null, null);
 List<CustomUser> customUsers = RandomUserMe.generateMultiUser<CustomUser>(10, null, null, null);
 
+
+
 // Standart Object
 
 User user = RandomUserMe.generateSingleUser(null, null, null);
