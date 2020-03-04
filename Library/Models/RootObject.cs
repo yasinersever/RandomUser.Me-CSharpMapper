@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class RootObject
     {
@@ -14,5 +14,6 @@ namespace Library.Models
 
         [JsonProperty("error")]
         public string Error { get; set; }
+
     }
 }

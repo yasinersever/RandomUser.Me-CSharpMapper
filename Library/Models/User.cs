@@ -1,10 +1,11 @@
-﻿using Library.Enums;
+﻿using RandomUser.Me.Enums;
 using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class User
     {
+
         [JsonProperty("gender")]
         public Gender Gender { get; set; }
 
@@ -40,5 +41,6 @@ namespace Library.Models
 
         [JsonProperty("nat")]
         public Nationality Nationality { get; set; }
+
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class Registered
     {
@@ -11,5 +11,6 @@ namespace Library.Models
 
         [JsonProperty("age")]
         public int Age { get; set; }
+
     }
 }

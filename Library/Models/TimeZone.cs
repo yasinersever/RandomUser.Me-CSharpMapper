@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class TimeZone
     {
@@ -10,5 +10,6 @@ namespace Library.Models
 
         [JsonProperty("Description")]
         public string description { get; set; }
+
     }
 }

@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class Login
     {
+
         [JsonProperty("uuid")]
         public string UUID { get; set; }
 
@@ -24,5 +25,6 @@ namespace Library.Models
 
         [JsonProperty("sha256")]
         public string SHA256 { get; set; }
+
     }
 }

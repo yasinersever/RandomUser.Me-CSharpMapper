@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class ID
     {
@@ -9,6 +9,7 @@ namespace Library.Models
         public string Name { get; set; }
 
         [JsonProperty("value")]
-        public object Value { get; set; }
+        public string Value { get; set; }
+
     }
 }

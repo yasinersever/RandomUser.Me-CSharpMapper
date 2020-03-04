@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class Name
     {
+
         [JsonProperty("title")]
         public string Title { get; set; }
 
@@ -12,5 +13,6 @@ namespace Library.Models
 
         [JsonProperty("last")]
         public string Last { get; set; }
+
     }
 }

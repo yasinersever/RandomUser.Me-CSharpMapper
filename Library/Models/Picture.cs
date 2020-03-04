@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class Picture
     {
@@ -13,5 +13,6 @@ namespace Library.Models
 
         [JsonProperty("thumbnail")]
         public string Thumbnail { get; set; }
+
     }
 }

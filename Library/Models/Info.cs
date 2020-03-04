@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class Info
     {
+
         [JsonProperty("seed")]
         public string Seed { get; set; }
 
@@ -15,5 +16,6 @@ namespace Library.Models
 
         [JsonProperty("version")]
         public string Version { get; set; }
+
     }
 }

@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
 
-namespace Library.Models
+namespace RandomUser.Me.Models
 {
     public class Location
     {
+
         [JsonProperty("street")]
         public Street Street { get; set; }
 
@@ -17,12 +18,13 @@ namespace Library.Models
         public string Country { get; set; }
 
         [JsonProperty("postcode")]
-        public int PostCode { get; set; }
+        public string PostCode { get; set; }
 
         [JsonProperty("coordinates")]
         public Coordinates Coordinates { get; set; }
 
         [JsonProperty("timezone")]
         public TimeZone TimeZone { get; set; }
+
     }
 }
