@@ -39,7 +39,8 @@ namespace RandomUser.Me
                 if (rootObject.Error != null)
                     throw new Exception(rootObject.Error);
                 return rootObject.Users;
-            }catch(Exception exp)
+            }
+            catch (Exception exp)
             {
                 throw new Exception("An error occurred during the operation. Please see inner exception.", exp);
             }
@@ -62,11 +63,11 @@ namespace RandomUser.Me
                 if (allData["error"] != null)
                     throw new Exception(allData["error"].ToString());
                 List<T> result = new List<T>();
-                foreach(JObject item in allData["results"].Children())
+                foreach (JObject item in allData["results"].Children())
                 {
                     T obj = Activator.CreateInstance<T>();
 
-                    foreach(PropertyInfo property in obj.GetType().GetProperties().Where(x => x.GetCustomAttributes(true).Any(y => y is RandomUserMeMap)).ToList())
+                    foreach (PropertyInfo property in obj.GetType().GetProperties().Where(x => x.GetCustomAttributes(true).Any(y => y is RandomUserMeMap)).ToList())
                     {
                         string path = property.GetCustomAttribute<RandomUserMeMap>().Path;
                         property.SetValue(obj, item.SelectToken(path).ToObject(property.PropertyType));

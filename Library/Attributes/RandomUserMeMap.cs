@@ -2,7 +2,7 @@
 
 namespace RandomUser.Me.Attributes
 {
-    public class RandomUserMeMap: Attribute
+    public class RandomUserMeMap : Attribute
     {
 
         public string Path { get; set; }

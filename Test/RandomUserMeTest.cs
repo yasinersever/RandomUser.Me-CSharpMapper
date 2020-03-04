@@ -56,7 +56,7 @@ namespace UnitTest
         [Test]
         public void StandartObject_GenerateSingleUser()
         {
-            Assert.IsNotNull(RandomUserMe.generateSingleUser(null,null,null));
+            Assert.IsNotNull(RandomUserMe.generateSingleUser(null, null, null));
         }
 
         [Test]
@@ -119,7 +119,7 @@ namespace UnitTest
         [Test]
         public void PasswordOptions_LengthCheck()
         {
-            PasswordOptions options = new PasswordOptions(5,10,PasswordType.special);
+            PasswordOptions options = new PasswordOptions(5, 10, PasswordType.special);
             List<User> userList = RandomUserMe.generateMultiUser(100, null, options, null);
             List<int> passwordLengths = userList.Select(x => x.Login.Password.Length).Distinct().ToList();
             if (options.MinLength <= passwordLengths.Min() && passwordLengths.Max() <= options.MaxLength)
