@@ -4,7 +4,7 @@ A .NET C# class mapper for https://randomuser.me written in .NET Core
 
 ## How to install
 ```
-dotnet add package RandomUser.Me-CSharpMapper --version 0.2.0
+dotnet add package RandomUser.Me-CSharpMapper
 ```
 
 ## How to use
