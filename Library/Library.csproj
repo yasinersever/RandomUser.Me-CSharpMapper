@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>RandomUser.Me-CSharpMapper</PackageId>
+    <PackageVersion>0.2</PackageVersion>
+    <Authors>Yasin Ersever</Authors>
+    <Copyright>Yasin Ersever</Copyright>
+    <Owners>Yasin Ersever </Owners>
+    <PackageProjectUrl>https://github.com/yersever/RandomUser.Me-CSharpMapper</PackageProjectUrl>
+    <PackageReleaseNotes>*v0.2
+- Package description added. 
+
+*v0.1
+- First publish.</PackageReleaseNotes>
+    <PackageTags>RandomUser.Me</PackageTags>
+    <Title>RandomUser.Me-CSharpMapper</Title>
+    <Description>A .NET C# class mapper for https://randomuser.me written in .NET Core</Description>
   </PropertyGroup>
 
   <ItemGroup>
