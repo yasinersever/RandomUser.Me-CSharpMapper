@@ -4,12 +4,15 @@
     <TargetFramework>net8.0</TargetFramework>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>RandomUser.Me-CSharpMapper</PackageId>
-    <PackageVersion>0.3</PackageVersion>
+    <PackageVersion>0.4</PackageVersion>
     <Authors>Yasin Ersever</Authors>
     <Copyright>Yasin Ersever</Copyright>
     <Owners>Yasin Ersever </Owners>
     <PackageProjectUrl>https://github.com/yersever/RandomUser.Me-CSharpMapper</PackageProjectUrl>
-    <PackageReleaseNotes>*v0.3
+    <PackageReleaseNotes>*v0.4
+- Project file updated. 
+
+*v0.3
 - Dependecy updated. 
 
 *v0.2
