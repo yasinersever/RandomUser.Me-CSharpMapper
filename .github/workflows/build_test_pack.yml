@@ -24,7 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Pack
-      run: dotnet pack ./src/Library/Library.csproj -c Release -o out
+      run: dotnet pack ./Library/Library.csproj -c Release -o out
     - name: Publish NuGet To GitHub Registry
       run: dotnet nuget push ./out/*.nupkg -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/yasinersever/index.json --skip-duplicate --no-symbols 
       env:
