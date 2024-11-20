@@ -19,6 +19,7 @@
 - First publish.</PackageReleaseNotes>
     <PackageTags>RandomUser.Me</PackageTags>
     <Title>RandomUser.Me-CSharpMapper</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Description>A .NET C# class mapper for https://randomuser.me written in .NET Core</Description>
   </PropertyGroup>
 
@@ -33,5 +34,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
