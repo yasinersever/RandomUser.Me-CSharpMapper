@@ -23,3 +23,19 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Pack
+      run: dotnet pack ./src/Library/Library.csproj -c Release -o out
+    - name: Publish NuGet To GitHub Registry
+      run: dotnet nuget push ./out/*.nupkg -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/yasinersever/index.json --skip-duplicate --no-symbols 
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          tag_name: ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
+          draft: false
+          prerelease: false
