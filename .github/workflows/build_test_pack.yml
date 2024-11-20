@@ -25,10 +25,15 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Pack
       run: dotnet pack ./Library/Library.csproj -c Release -o out
-    - name: Publish NuGet To GitHub Registry
+    - name: Publish Package To GitHub Registry
       run: dotnet nuget push ./out/*.nupkg -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/yasinersever/index.json --skip-duplicate --no-symbols 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Publish Package To nuget.org Registry
+      uses: edumserrano/nuget-push@v1.2.2
+      with:
+        api-key: ${{ secrets.NUGET_ORG_API_KEY }}
+        working-directory: ./out
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
